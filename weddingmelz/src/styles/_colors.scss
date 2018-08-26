@@ -1,0 +1,17 @@
+$primary-color: red;
+$secondary-color: blue;
+
+
+h2 {
+  color: $primary-color;
+  border: 1px solid $secondary-color;
+}
+
+#section-one1, #section-three3, #section-five5, #section-seven7 {
+  height: 100vh;
+  background: #fcf2f5;
+}
+#section-two2, #section-four4, #section-six6, #section-eight8 {
+  height: 100vh;
+  background: orangered;
+}
