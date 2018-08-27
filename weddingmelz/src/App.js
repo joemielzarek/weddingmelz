@@ -51,7 +51,7 @@ const Home = () => (
   <div>
     {/* <SimpleSlider></SimpleSlider> */}
     <section>
-    <video src={hero} autoPlay loop></video>
+    <video src={hero} autoPlay loop muted></video>
     <div class="call-to-action">
       <img src={logoAlt} />
       <div class="cta-description">
