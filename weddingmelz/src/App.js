@@ -1,62 +1,80 @@
 import React, { Component } from 'react';
-import logo from './images/logo3.svg';
+
+
+import logo from './images/logo2_1.svg';
 import logoAlt from './images/logo.svg';
-import hero from './images/hero-video.mp4';
-import './App.css';
+// import hero from './images/hero-video.mp4';
+
+
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+
+import './App.css';
+
 import ScrollableAnchor, {goToTop, goToAnchor, removeHash, configureAnchors} from 'react-scrollable-anchor'
 import SimpleSlider from './components/slide';
 
-configureAnchors({offset: 0, scrollDuration: 800})
+configureAnchors({offset: 0, scrollDuration: 800});
+
+
+
 
 const weddingMelz = () => (
-  <Router>
-    <div>
-      <ul class="main-nav">
-      <li>
-          <Link to="/"><div class="logo-container"><img src={logo} alt="Logo" /></div></Link>
-        </li>
-        <li>
-        <a href='/#section-one'> About Us </a>
-        </li>
-        <li>
-        <a href='/#section-two'> Day of Details </a>
-        </li>
-        <li>
-        <a href='/#section-three'> Wedding Party </a>
-        </li>
-        <li>
-        <a href='/#section-five'> Accomodations </a>
-        </li>
-        <li>
-        <a href='/#section-six'> Registry </a>
-        </li>
-        <li>
-          <Link to="/about">RSVP</Link>
-        </li>
-        {/* <li>
-          <Link to="/topics">Topics</Link>
-        </li> */}
+<Router>
+   <div>
+      <ul className="main-nav">
+         <li>
+            <Link to="/">
+            <div className="logo-container"><img src={logo} alt="Logo" /></div>
+            </Link>
+         </li>
+         <div className="nav-links-container">
+         <li>
+            <a href='/#section-one'> About Us </a>
+         </li>
+         <li>
+            <a href='/#section-two'> Details </a>
+         </li>
+         <li>
+            <a href='/#section-three'> Wedding Party </a>
+         </li>
+         <li>
+            <a href='/#section-five'> Accomodations </a>
+         </li>
+         <li>
+            <a href='/#section-six'> Registry </a>
+         </li>
+         <li>
+            <Link to="/about">
+            RSVP</Link>
+         </li>
+         {/* 
+         <li>
+            <Link to="/topics">
+            Topics</Link>
+         </li>
+         */}
+         </div>
       </ul>
-
       <Route exact path="/" component={Home} />
       <Route path="/rsvp" component={About} />
-      {/* <Route path="/topics" component={Topics} /> */}
-    </div>
-  </Router>
+      {/* 
+      <Route path="/topics" component={Topics} />
+      */}
+   </div>
+</Router>
 );
 
 //COMPONENTS//////////////////////////////////////////////////
 const Home = () => (
   <div>
-    {/* <SimpleSlider></SimpleSlider> */}
+    <SimpleSlider></SimpleSlider>
     <section>
-    <video src={hero} autoPlay loop muted></video>
-    <div class="call-to-action">
+    {/* <video src={hero} autoPlay loop muted></video> */}
+    <div className="call-to-action">
       <img src={logoAlt} />
-      <div class="cta-description">
+      <div className="cta-description">
       <h3>to have and to hold.</h3>
-        <p>May 13th, 2019 </p>
+        <p>05.11.2019</p>
           <button>RSVP</button>
           </div>
     </div>

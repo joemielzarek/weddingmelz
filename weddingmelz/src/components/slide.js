@@ -13,13 +13,14 @@ import Slide5 from "../images/slide_5.JPG";
 export default class SimpleSlider extends Component {
   render() {
     const settings = {
-      dots: true,
-      arrows: true,
+      dots: false,
+      arrows: false,
       infinite: true,
-      speed: 500,
+      speed: 6000,
       slidesToShow: 1,
       slidesToScroll: 1,
-      autoplay: true
+      autoplay: true,
+      fade: true
     };
     return (
       
